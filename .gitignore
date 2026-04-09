@@ -1,0 +1,38 @@
+/config/
+/logs/
+/deploy/config/
+/deploy/logs/
+**/mandarin/ahas/**
+**/mq_backup_db/**
+.gradle
+build/
+out/
+target/
+*.log
+/metadata
+mq_backup_db
+.mvn/
+!.mvn/wrapper/maven-wrapper.properties
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/

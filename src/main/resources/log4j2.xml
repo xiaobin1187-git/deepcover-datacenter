@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- log4j2 配置文件 -->
+<Configuration name="log4j2Conf" status="WARN" monitorInterval="60">
+    <properties>
+        <property name="log.path" value="./logs"/>
+        <property name="log.encoding" value="UTF-8"/>
+        <property name="log.level" value="info"/>
+        <property name="appName" value="deepcover-datacenter"/>
+    </properties>
+
+    <Appenders>
+        <!-- 控制台 -->
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <!-- 默认 Appender -->
+        <RollingFile name="DEFAULT-APPENDER" fileName="${log.path}/default.log"
+                     filePattern="${log.path}/default-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout charset="${log.encoding}" pattern="%d %-5p %c{2} - %m %X{TrackId}%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="250MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${log.path}" maxDepth="1">
+                    <IfFileName glob="default-*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="DEFAULT-SQL" fileName="${log.path}/sql.log"
+                     filePattern="${log.path}/default-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout charset="${log.encoding}" pattern="%d %-5p %c{2} - %m %X{TrackId}%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="250MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${log.path}" maxDepth="1">
+                    <IfFileName glob="default-*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <!-- 异常日志 Appender -->
+        <RollingFile name="SYS-ERROR-APPENDER" fileName="${log.path}/error.log"
+                     filePattern="${log.path}/error-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout charset="${log.encoding}" pattern="%d %-5p %c{2} - %m %X{TrackId}%n"/>
+            <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="250MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${log.path}" maxDepth="1">
+                    <IfFileName glob="error-*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <!-- 服务 Appender -->
+        <RollingFile name="SYS-BIZ-SERVICE-APPENDER" fileName="${log.path}/service.log"
+                     filePattern="${log.path}/service-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout charset="${log.encoding}" pattern="%d %-5p %c{2} - %m %X{TrackId}%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="250MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10">
+                <Delete basePath="${log.path}" maxDepth="1">
+                    <IfFileName glob="service-*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <!-- 请求日志  Appender -->
+        <RollingFile name="REQUEST-APPENDER" fileName="${log.path}/request.log"
+                     filePattern="${log.path}/request-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout charset="${log.encoding}"
+                           pattern="%d %-5p %c{2} - %m %X{TrackId}%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy modulate="true" interval="1"/>
+                <SizeBasedTriggeringPolicy size="250MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="50">
+                <Delete basePath="${log.path}" maxDepth="1">
+                    <IfFileName glob="request-*.log"/>
+                    <IfLastModified age="7d"/>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d][%t][%p][%c:%L] %m%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- DAL统一日志 -->
+        <Logger name="io.deepcover.datacenter.dal" level="${log.level}"
+                additivity="false">
+            <AppenderRef ref="DEFAULT-APPENDER"/>
+            <AppenderRef ref="SYS-ERROR-APPENDER"/>
+        </Logger>
+
+        <!--        <Logger name="org.apache.ibatis" level="${log.level}"-->
+        <!--                additivity="false">-->
+        <!--            <AppenderRef ref="DAL-APPENDER"/>-->
+        <!--            <AppenderRef ref="SYS-ERROR-APPENDER"/>-->
+        <!--        </Logger>-->
+
+        <!--        &lt;!&ndash; 数据访问层 - SQL &ndash;&gt;-->
+        <!--        <Logger name="com.alibaba.druid" level="${log.level}"-->
+        <!--                additivity="false">-->
+        <!--            <AppenderRef ref="DAL-APPENDER"/>-->
+        <!--            <AppenderRef ref="SYS-ERROR-APPENDER"/>-->
+        <!--        </Logger>-->
+
+        <!-- 业务服务层日志 -->
+        <Logger name="io.deepcover.datacenter.service" level="${log.level}"
+                additivity="false">
+<!--            <AppenderRef ref="CONSOLE"/>-->
+            <AppenderRef ref="DEFAULT-APPENDER"/>
+            <AppenderRef ref="SYS-BIZ-SERVICE-APPENDER"/>
+            <AppenderRef ref="SYS-ERROR-APPENDER"/>
+        </Logger>
+        <Logger name="io.deepcover.datacenter.service.config" level="${log.level}"
+                additivity="false">
+            <AppenderRef ref="DEFAULT-SQL"/>
+        </Logger>
+
+        <Root level="${log.level}">
+<!--            <AppenderRef ref="CONSOLE"/>-->
+            <AppenderRef ref="DEFAULT-APPENDER"/>
+            <AppenderRef ref="SYS-ERROR-APPENDER"/>
+            <AppenderRef ref="REQUEST-APPENDER"/>
+        </Root>
+    </Loggers>
+</Configuration>
