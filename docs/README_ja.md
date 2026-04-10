@@ -1,5 +1,5 @@
+<div align="center"><img src="docs/assets/logo.svg" alt="DeepCover" width="96" height="96"></div>
 # DeepCover Data Center - プレシジョン分析データセンター
-<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](../README.md)** | [English](README_en.md) | **日本語** | [Francais](README_fr.md) | [Portugues](README_pt.md) | [Русский](README_ru.md)
 
