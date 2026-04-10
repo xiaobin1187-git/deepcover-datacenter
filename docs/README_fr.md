@@ -1,4 +1,5 @@
-# DeepCover Data Center - Centre de donnees de couverture de code
+# DeepCover Data Center - Centre d analyse de precision
+<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](../README.md)** | [English](README_en.md) | [日本語](README_ja.md) | **Francais** | [Portugues](README_pt.md) | [Русский](README_ru.md)
 
@@ -12,11 +13,11 @@
 
 </div>
 
-> Centre de stockage, de traitement et d'analyse des donnees de couverture de code, fonctionne avec DeepCover Agent pour fournir une chaine complete de collecte de couverture de code
+> Centre de stockage, de traitement et d'analyse des donnees d analyse de precision, fonctionne avec DeepCover Agent pour fournir une chaine complete de collecte d analyse de precision
 
 ## Presentation
 
-DeepCover Data Center est le module de centre de donnees du systeme de collecte de couverture de code [DeepCover](https://github.com/xiaobin1187-git/deepcover). Il recoit les donnees de couverture de code collectees par l'Agent et effectue la modelisation de scenarios, l'analyse de traces et le stockage persistant.
+DeepCover Data Center est le module de centre de donnees du systeme de collecte d analyse de precision [DeepCover](https://github.com/xiaobin1187-git/deepcover). Il recoit les donnees d analyse de precision collectees par l'Agent et effectue la modelisation de scenarios, l'analyse de traces et le stockage persistant.
 
 ### Fonctionnalites principales
 
