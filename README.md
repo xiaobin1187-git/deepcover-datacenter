@@ -1,4 +1,5 @@
-# DeepCover Data Center - 代码覆盖率数据中心
+# DeepCover Data Center - 精准分析数据中心
+<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](README.md)** | [English](docs/README_en.md) | [日本語](docs/README_ja.md) | [Francais](docs/README_fr.md) | [Portugues](docs/README_pt.md) | [Русский](docs/README_ru.md)
 
@@ -12,11 +13,11 @@
 
 </div>
 
-> 代码覆盖率数据存储、处理与分析中心，配合 DeepCover Agent 实现完整的代码覆盖率采集链路
+> 精准分析数据存储、处理与分析中心，配合 DeepCover Agent 实现完整的精准分析采集链路
 
 ## 简介
 
-DeepCover Data Center 是 [DeepCover](https://github.com/xiaobin1187-git/deepcover) 代码覆盖率采集系统的数据中心模块，负责接收 Agent 采集的代码覆盖率数据，进行场景建模、链路分析和持久化存储。
+DeepCover Data Center 是 [DeepCover](https://github.com/xiaobin1187-git/deepcover) 精准分析采集系统的数据中心模块，负责接收 Agent 采集的精准分析数据，进行场景建模、链路分析和持久化存储。
 
 ### 主要特性
 
