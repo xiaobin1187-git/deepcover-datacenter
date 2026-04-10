@@ -1,4 +1,5 @@
-# DeepCover Data Center - コードカバレッジデータセンター
+# DeepCover Data Center - プレシジョン分析データセンター
+<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](../README.md)** | [English](README_en.md) | **日本語** | [Francais](README_fr.md) | [Portugues](README_pt.md) | [Русский](README_ru.md)
 
@@ -12,11 +13,11 @@
 
 </div>
 
-> コードカバレッジデータの保存、処理、分析センター。DeepCover Agentと連携し、完全なコードカバレッジ収集パイプラインを実現
+> プレシジョン分析データの保存、処理、分析センター。DeepCover Agentと連携し、完全なプレシジョン分析収集パイプラインを実現
 
 ## 概要
 
-DeepCover Data Center は [DeepCover](https://github.com/xiaobin1187-git/deepcover) コードカバレッジ収集システムのデータセンターモジュールです。Agentが収集したコードカバレッジデータを受信し、シナリオモデリング、トレース分析、永続ストレージを行います。
+DeepCover Data Center は [DeepCover](https://github.com/xiaobin1187-git/deepcover) プレシジョン分析収集システムのデータセンターモジュールです。Agentが収集したプレシジョン分析データを受信し、シナリオモデリング、トレース分析、永続ストレージを行います。
 
 ### 主な特徴
 
