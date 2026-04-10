@@ -1,4 +1,4 @@
-<div align="center"><img src="docs/assets/logo.svg" alt="DeepCover" width="96" height="96"></div>
+<p align="center"><img src="docs/assets/logo.svg" alt="DeepCover" width="96" height="96"></p>
 # DeepCover Data Center - Centro de analise de precisao
 
 **[中文](../README.md)** | [English](README_en.md) | [日本語](README_ja.md) | [Francais](README_fr.md) | **Portugues** | [Русский](README_ru.md)
