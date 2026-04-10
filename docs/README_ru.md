@@ -6,7 +6,7 @@
 
 ![CI](https://img.shields.io/github/actions/workflow/status/xiaobin1187-git/deepcover-datacenter/ci.yml?branch=main)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-![Java](https://img.shields.io/badge/Java-1.8-orange)
+![Java](https://img.shields.io/badge/Java-17-green)
 ![Maven](https://img.shields.io/badge/Maven-3.5-blue)
 ![Tests](https://img.shields.io/badge/Tests-58_passed-brightgreen)
 
@@ -88,7 +88,7 @@ DeepCover Data Center -- это модуль центра данных сист�
 
 ### Требования
 
-- JDK 1.8+
+- JDK 17 LTS
 - Maven 3.5+
 - Neo4j 4.4+
 - MySQL 8.0+
