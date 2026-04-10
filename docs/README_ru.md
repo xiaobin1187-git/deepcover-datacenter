@@ -1,4 +1,5 @@
-# DeepCover Data Center - Центр данных покрытия кода
+# DeepCover Data Center - Центр точного анализа
+<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](../README.md)** | [English](README_en.md) | [日本語](README_ja.md) | [Francais](README_fr.md) | [Portugues](README_pt.md) | **Русский**
 
@@ -12,11 +13,11 @@
 
 </div>
 
-> Центр хранения, обработки и анализа данных покрытия кода, работающий с DeepCover Agent для обеспечения полного конвейера сбора покрытия кода
+> Центр хранения, обработки и анализа данных точного анализа, работающий с DeepCover Agent для обеспечения полного конвейера сбора точного анализа
 
 ## Введение
 
-DeepCover Data Center -- это модуль центра данных системы сбора покрытия кода [DeepCover](https://github.com/xiaobin1187-git/deepcover). Он получает данные о покрытии кода, собранные Agent, и выполняет моделирование сценариев, анализ трассировок и постоянное хранение.
+DeepCover Data Center -- это модуль центра данных системы сбора точного анализа [DeepCover](https://github.com/xiaobin1187-git/deepcover). Он получает данные точного анализа, собранные Agent, и выполняет моделирование сценариев, анализ трассировок и постоянное хранение.
 
 ### Основные возможности
 
