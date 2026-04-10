@@ -1,4 +1,5 @@
-# DeepCover Data Center - Centro de dados de cobertura de codigo
+# DeepCover Data Center - Centro de analise de precisao
+<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](../README.md)** | [English](README_en.md) | [日本語](README_ja.md) | [Francais](README_fr.md) | **Portugues** | [Русский](README_ru.md)
 
@@ -12,11 +13,11 @@
 
 </div>
 
-> Centro de armazenamento, processamento e analise de dados de cobertura de codigo, trabalhando com o DeepCover Agent para fornecer um pipeline completo de coleta de cobertura de codigo
+> Centro de armazenamento, processamento e analise de dados de analise de precisao, trabalhando com o DeepCover Agent para fornecer um pipeline completo de coleta de analise de precisao
 
 ## Introducao
 
-O DeepCover Data Center e o modulo de centro de dados do sistema de coleta de cobertura de codigo [DeepCover](https://github.com/xiaobin1187-git/deepcover). Ele recebe os dados de cobertura de codigo coletados pelo Agent e realiza modelagem de cenarios, analise de rastreamento e armazenamento persistente.
+O DeepCover Data Center e o modulo de centro de dados do sistema de coleta de analise de precisao [DeepCover](https://github.com/xiaobin1187-git/deepcover). Ele recebe os dados de analise de precisao coletados pelo Agent e realiza modelagem de cenarios, analise de rastreamento e armazenamento persistente.
 
 ### Principais recursos
 
