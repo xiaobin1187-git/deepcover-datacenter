@@ -1,4 +1,5 @@
-# DeepCover Data Center - Code Coverage Data Center
+# DeepCover Data Center - Precision Analysis Data Center
+<img src="docs/assets/logo.svg" alt="DeepCover Logo" width="128" height="128" align="right">
 
 **[中文](../README.md)** | **English** | [日本語](README_ja.md) | [Francais](README_fr.md) | [Portugues](README_pt.md) | [Русский](README_ru.md)
 
@@ -12,11 +13,11 @@
 
 </div>
 
-> A data storage, processing, and analysis center for code coverage, working with DeepCover Agent to provide a complete code coverage collection pipeline
+> A data storage, processing, and analysis center for precision analysis, working with DeepCover Agent to provide a complete precision analysis collection pipeline
 
 ## Introduction
 
-DeepCover Data Center is the data center module of the [DeepCover](https://github.com/xiaobin1187-git/deepcover) code coverage collection system. It receives code coverage data collected by the Agent and performs scenario modeling, trace analysis, and persistent storage.
+DeepCover Data Center is the data center module of the [DeepCover](https://github.com/xiaobin1187-git/deepcover) precision analysis collection system. It receives precision analysis data collected by the Agent and performs scenario modeling, trace analysis, and persistent storage.
 
 ### Key Features
 
