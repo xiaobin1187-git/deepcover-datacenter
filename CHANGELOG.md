@@ -66,7 +66,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/lang/zh-CN/
 
 - 支持更多数据源配置
 - 性能监控仪表盘
-- 覆盖率报告生成 API
+- 精准分析报告生成 API
 
 ---
 
