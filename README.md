@@ -1,4 +1,5 @@
 <p align="center"><img src="docs/assets/logo.svg" alt="DeepCover" width="96" height="96"></p>
+
 # DeepCover Data Center - 精准分析数据中心
 
 **[中文](README.md)** | [English](docs/README_en.md) | [日本語](docs/README_ja.md) | [Francais](docs/README_fr.md) | [Portugues](docs/README_pt.md) | [Русский](docs/README_ru.md)
